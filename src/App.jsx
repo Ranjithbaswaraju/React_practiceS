@@ -1,15 +1,46 @@
-import './App.css'
-import ParentComponent from './Components/Parent'
+// import { useState } from 'react'
+// import './App.css'
+// // import ParentComponent from './Components/Parent'
+// import HomePage from './Screens/Home'
+// import AboutPage from './Screens/About'
 
-function App() {
+// function App() {
+//   const[isHome,setIsHome]=useState(true)
  
-  return(
-    <>
-    <h1>First Program</h1>
-    
-    <ParentComponent/>
-    </>
-  )
-}
+//   return(
+//     <>
+//     <button onClick={()=>setIsHome(true)}>Home</button>
+//     <button onClick={()=>setIsHome(false)}>About</button>
 
-export default App
+//     {
+//       isHome ? <HomePage/> : <AboutPage/>
+//     }
+    
+//     </>
+//   )
+// }
+
+// export default App
+
+
+import React, { useState } from "react";
+import CardComponent from "./Screens/CardComponent";
+
+function App(){
+  const[hide,setHide]=useState(true)
+    const data={
+      name:"Ranjith",
+      age:24,
+      address:"Cherial"
+    }
+
+    return(
+      <>
+       {hide ? <CardComponent data={data} /> : null}
+      {
+        <button onClick={()=>setHide(!hide)}>{hide ? "Show Profile" : "Hide Profile"}</button>
+      }
+      </>
+    )
+}
+export default App;
