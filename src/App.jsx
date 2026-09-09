@@ -29,9 +29,10 @@ import CardComponent from "./Screens/CardComponent";
 function App(){
   const[hide,setHide]=useState(true)
     const data={
-      name:"Ranjith",
-      age:24,
-      address:"Cherial"
+      Name:"Ranjith",
+      Age:24,
+      Address:"Cherial",
+
     }
 
     return(

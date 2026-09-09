@@ -3,9 +3,9 @@ import React from "react";
 const CardComponent=({data})=>{
     return(
         <>
-        <p>Name:{data.name}</p>
-        <p>Age:{data.age}</p>
-        <p>Address:{data.address}</p>
+        <p>Name: {data.Name}</p>
+        <p>Age: {data.Age}</p>
+        <p>Address: {data.Address}</p>
         
         </>
     )
